@@ -30,3 +30,11 @@ function changeSlide(){
     }
     imgs[n].style.display = 'block';
 }
+
+const scrollContainer = document.querySelectorAll(".scroll-products");
+for (const item of scrollContainer){
+    item.addEventListener('wheel', (event)=>{
+        event.preventDefault();
+        item.scrollLeft += event.deltaY;
+    });
+}
